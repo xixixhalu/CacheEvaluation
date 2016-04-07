@@ -1,3 +1,3 @@
-# COMMANDS
+# Tools for Redis
 
-redis-server config/redis.conf
+Simple client for `GET` and `SET`
