@@ -5,8 +5,8 @@ MyRedis.o: MyRedis.cpp MyRedis.h
 	g++ -c MyRedis.cpp -o MyRedis.o -L/usr/local/lib/ -lhiredis
 
 clean:
-	rm *.o
-	rm client
+	rm -f *.o client
 
+# Remove backup of Redis-server
 cdb:
-	rm ./config/dump.rdb
+	rm -f ./config/*.rdb *.rdb
