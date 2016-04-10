@@ -62,8 +62,8 @@ bool MyRedis::setData(char* key, char* value) {
 
 bool MyRedis::t_singleInsert(size_t dsize) {
 	static int i = 0;
-	char key[10];
-	char value[10];
+	char* key = (char*)malloc(10);
+	char* value = (char*)malloc(dsize - 10);
 	sprintf(key, "%010d", i);
 	sprintf(value, "%d", i);
 	if (!setData(key, 10, value, dsize - 10)) {
